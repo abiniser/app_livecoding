@@ -1,50 +1,38 @@
-# React Native Live Coding Challenge
+# React Native Technical Interview: Product Feed
 
-Improve a small product catalog during a **45-minute interview**. The starting code intentionally contains performance, interaction, and reliability problems.
+Welcome! This repository contains a simplified product catalog screen with several common performance bottlenecks and UX opportunities.
 
-## Run the app
+## 🚀 Running the App
 
-You need Node.js and either Expo Go, an emulator, or a web browser.
+1. `npm install`
+2. `npx expo start`
+3. Press `w` for web, or scan with **Expo Go** on your device.
 
-```bash
-npm install
-npm start
-```
+---
 
-Then press `a` for Android, `i` for iOS, or `w` for web.
+## 🎯 The Challenge
 
-Start in [`src/screens/ProductCatalogScreen.tsx`](src/screens/ProductCatalogScreen.tsx).
+Take a look at [`src/screens/ProductCatalogScreen.tsx`](./src/screens/ProductCatalogScreen.tsx). You have full freedom to refactor, redesign, and improve the code as you see fit.
 
-## Your task
+### 1. Fix Core Performance Issues
+Users have reported that:
+* Typing into the search bar drops frame rates and causes the entire list to stutter.
+* Tapping the "Like" button feels sluggish and freezes the screen momentarily.
+* Tapping an item while the keyboard is open doesn't register on the first touch.
 
-Use the time in whatever order you think is most valuable.
+Diagnose what is happening under the hood and make the screen run at a smooth 60fps.
 
-1. **Improve the main interactions**
-   - Searching currently makes the product list stutter.
-   - Liking a product feels slow.
-   - With the keyboard open, the first tap on a product may be lost.
+### 2. UI / UX Polish (Show Your Taste)
+You have creative freedom to improve the UI/UX of this screen. We want to see your mobile design sense:
+* Make the cards and interactions feel responsive, tactile, and native.
+* Address any missing states (e.g. empty search results, layout polish, touch feedback).
+* Take whatever creative liberties you like to make the experience feel premium!
 
-2. **Improve the mobile experience**
-   - Make taps feel clear and responsive.
-   - Handle an empty search result.
-   - Polish the layout where useful.
+### 3. Edge Cases & Resilience
+Consider real-world mobile conditions (e.g. rapid tapping, flaky network). How resilient is the "Like" interaction against race conditions or network failures, and how would you handle it?
 
-3. **Make Like reliable**
-   - Consider rapid taps, overlapping requests, and request failures.
-   - Implement what fits in the time, then explain any remaining tradeoffs.
+---
 
-## Helpful context
+> **Note on AI Tools:** Feel free to use AI assistants (ChatGPT, Copilot, Cursor). We care most about your thought process, design taste, and your ability to explain **why** you made each decision.
 
-- The render counter at the top helps you observe committed renders while you work.
-- The mock Like API intentionally changes its response time and occasionally fails.
-- You may change any candidate-facing source file.
-- You do not need to complete every possible improvement. Prioritize, test your main changes, and explain your decisions.
-- AI tools are allowed. Be ready to explain the code and why you chose your approach.
-
-## Before you finish
-
-Show the interviewer the behavior you improved and briefly cover:
-
-- the problem you found;
-- how your change fixes it;
-- any edge case or follow-up you would handle with more time.
+Have fun with it!
